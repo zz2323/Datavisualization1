@@ -525,18 +525,23 @@
 }
     
     
-    
-    
-    
-    
-    
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
       	
       	var myDataArray = [];
       	
-      	for (var i=0; i<AllMyData.observation.length[i])
+      	var myObs = AllMyData.observations;
+      	
+      	for (var i=0; i<myObs.length; i++){
+      		
+      		var myItem = [];
+      		myItem.push(myObs[i].date);
+      		myItem.push(myObs[i].value);
+      		myDataArray.push(myItem);
+      	}
+      	
+      	console.log(myDataArray);
       	
       	
       	
