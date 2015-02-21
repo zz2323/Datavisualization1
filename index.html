@@ -165,45 +165,34 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
       	
-      	var myDataArray = [];
+      	var myPopularSeries = [];
       	
       	var myObs = AllMyData.tags;
       	
       	for (var i=0; i<myObs.length; i++){
       		
-      		var myItem = [];
-      		myItem.push(myObs[i].name);
-      		myItem.push(myObs[i].popularity);
-      		myDataArray.push(myItem);
+      		var namesAndPopulartiy = [];
+      		namesAndPopulartiy.push(myObs[i].name);
+      		namesAndPopulartiy.push(myObs[i].popularity);
+      		myPopularSeries.push(namesAndPopulartiy);
       	}
       	
-      	console.log(myDataArray);
+      	console.log(myPopularSeries);
       	
-      	
-      	
-      	
-      	
-      	
-      	
-        var data = google.visualization.arrayToDataTable([
-          ['Age', 'Weight'],
-          [ 8,      12],
-          [ 4,      5.5],
-          [ 11,     14],
-          [ 4,      5],
-          [ 3,      3.5],
-          [ 6.5,    7]
-        ]);
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('number', 'Popularity');
+        data.addRows(myPopularSeries);
+        
+        
 
-        var options = {
-          title: 'Age vs. Weight comparison',
-          hAxis: {title: 'Age', minValue: 0, maxValue: 15, textStyle: {color:"red",fontSize: 16}},
-          vAxis: {title: 'Weight', minValue: 0, maxValue: 15, textStyle: {color: "blue", fontsize: 20}},
-          legend: "middle",fontSize: 30
-        };
+        // Set chart options
+        var options = {'title':'How Many Pizza I Ate Before I Stuffed to Death',
+                       'width':400,
+                       'height':300};
 
+        // Instantiate and draw our chart, passing in some options.
         var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-
         chart.draw(data, options);
       }
     </script>
