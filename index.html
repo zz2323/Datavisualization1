@@ -2,61 +2,32 @@
 	<head>
 		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 		
+		/*
+		 * redirected data to AllMyData.js
+		 */
 		<script type="text/javascript" src="AllMyData.js"></script>
 		
+		/*
+		 * redirected function to scripts.js
+		 */
+		<script type="text/javascript" src="scripts.js"></script> 
+		<script type="text/javascript"></script>
 		
-		<script type="text/javascript">
-
-
-			google.load("visualization", "1", {
-				packages : ["corechart"]
-			});
-			google.setOnLoadCallback(drawChart);
-			function drawChart() {
-
-				var myPopularSeries = [];//an empty array to put all the data
-
-				var myObs = AllMyData.tags;//changed the name tag to follow the D.R.Y principle
+		
+		<style>
+			.myclass{
+				border:1px solid red;
 				
-				/*
-				 * A for loop to get the name and popularity from AllMyData
-				 * 
-				 */
-				for (var i = 0; i < myObs.length; i++) {
-
-					var namesAndPopulartiy = [];
-					namesAndPopulartiy.push(myObs[i].name);
-					namesAndPopulartiy.push(myObs[i].popularity);//the string is already in digit, so I don't need the Number function to convert.
-					myPopularSeries.push(namesAndPopulartiy);
-				}
-
-				console.log(myPopularSeries);
-
-				var data = new google.visualization.DataTable();
-				data.addColumn('string', 'Name');//add the hAxis
-				data.addColumn('number', 'Popularity');//add the vAxis
-				data.addRows(myPopularSeries);
-
-				// Set chart options
-				var options = {
-					
-					title : 'How Popular are these Series Search',
-					hAxis : {
-						title : 'Popularity',
-						minValue : 0,
-						maxValue : 100,//setting the MaxValue to 100
-					},
-					vAxis : {
-						title : 'Series'
-					},
-					legend : 'top' //putting the legend on top
-				};
-
-
-				var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
-				chart.draw(data, options);
 			}
-		</script>
+			
+			
+			
+		</style>
+		
+		
+		
+		
+		
 	</head>
 	<body>
 		<div id="chart_div" style="width: 800px; height: 600px;"></div>
