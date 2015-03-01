@@ -6,9 +6,14 @@ var options = {
 	'width' : 800,
 	'height' : 600,
 	'hAxis':{
-	 'title':'Popularity'
+	 'title':'Popularity',
+	'vAxis': {
+		'title':'Series'}//end of vAxis object
 	}//end of hAxis object
     }; //end of option
+
+options.vAxis.textStyle = myTextStyle
+
 
 
 var myTextStyle = {
