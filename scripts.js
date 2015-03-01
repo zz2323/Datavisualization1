@@ -1,50 +1,46 @@
 //credit Google
 
-	// Set chart options
-	var options = {
+// Set chart options
+var options = {
+	'title' : 'How Popular are these Series Search',
+	'width' : 800,
+	'height' : 600
+	'hAxis':{
+		
+	}//end of hAxis object
+    }; //end of option
 
 
-		title : 'How Popular are these Series Search',
-		hAxis : {
-			title : 'Popularity',
-			minValue : 0,
-			maxValue : 100, //setting the MaxValue to 100
-		},
-		vAxis : {
-			title : 'Series'
-		},
-		legend : 'top' //putting the legend on top
-	};
-	/*
-	 * changed scatter chart into a bar chart
-	 */
+hAxis : { title : 'Popularity',
+	minValue : 0,
+	maxValue : 100, //setting the MaxValue to 100
+	}, vAxis : { title :'Series'
+	}, legend :'top' //putting the legend on top
+};
 
+/*
+ * changed scatter chart into a bar chart
+ */
 
 var myTextStyle = {
-      fontName: 'Times-Roman',
-      fontSize: 18,
-      bold: true,
-      italic: true,
-      color: '#871b47',     // The color of the text.
-      auraColor: '#d799ae', // The color of the text outline.
-      opacity: 0.8          // The transparency of the text.
-   };
-
-
-
+	fontName : 'Times-Roman',
+	fontSize : 18,
+	bold : true,
+	italic : true,
+	color : '#871b47', // The color of the text.
+	auraColor : '#d799ae', // The color of the text outline.
+	opacity : 0.8 // The transparency of the text.
+};
 
 //Load the Google visualization API and the scatter chart package
 google.load("visualization", "1", {
 	packages : ["corechart"]
 });
 
-
 /*
  * area for my Google Viz Style objects: fonts, color
- * 
+ *
  */
-
-
 
 google.setOnLoadCallback(drawChart);
 function drawChart() {
@@ -79,7 +75,6 @@ function drawChart() {
 
 	// Set chart options
 	var options = {
-
 
 		title : 'How Popular are these Series Search',
 		hAxis : {
