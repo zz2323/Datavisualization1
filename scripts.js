@@ -4,23 +4,12 @@
 var options = {
 	'title' : 'How Popular are these Series Search',
 	'width' : 800,
-	'height' : 600
+	'height' : 600,
 	'hAxis':{
-		
+	 'title':'Popularity'
 	}//end of hAxis object
     }; //end of option
 
-
-hAxis : { title : 'Popularity',
-	minValue : 0,
-	maxValue : 100, //setting the MaxValue to 100
-	}, vAxis : { title :'Series'
-	}, legend :'top' //putting the legend on top
-};
-
-/*
- * changed scatter chart into a bar chart
- */
 
 var myTextStyle = {
 	fontName : 'Times-Roman',
@@ -73,20 +62,6 @@ function drawChart() {
 	//add the vAxis
 	data.addRows(myPopularSeries);
 
-	// Set chart options
-	var options = {
-
-		title : 'How Popular are these Series Search',
-		hAxis : {
-			title : 'Popularity',
-			minValue : 0,
-			maxValue : 100, //setting the MaxValue to 100
-		},
-		vAxis : {
-			title : 'Series'
-		},
-		legend : 'top' //putting the legend on top
-	};
 	/*
 	 * changed scatter chart into a bar chart
 	 */
