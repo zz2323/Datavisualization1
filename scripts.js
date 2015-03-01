@@ -1,30 +1,23 @@
 //credit Google
-
+var myTextStyle = {
+	fontName : 'Times-Roman',
+	fontSize : 18,
+	color : '#ff0000', // The color of the text.
+	opacity : 0.8 // The transparency of the text.
+};
 // Set chart options
 var options = {
 	'title' : 'How Popular are these Series Search',
 	'width' : 800,
 	'height' : 600,
-	'hAxis':{
-	 'title':'Popularity',
-	'vAxis': {
-		'title':'Series'}//end of vAxis object
-	}//end of hAxis object
+	'hAxis':{'title':'Popularity'},//end of hAxis object
+	'vAxis':{'title':'Series'}//end of vAxis object
     }; //end of option
+    
 
-options.vAxis.textStyle = myTextStyle
+options.hAxis.textStyle = myTextStyle;
 
-
-
-var myTextStyle = {
-	fontName : 'Times-Roman',
-	fontSize : 18,
-	bold : true,
-	italic : true,
-	color : '#871b47', // The color of the text.
-	auraColor : '#d799ae', // The color of the text outline.
-	opacity : 0.8 // The transparency of the text.
-};
+options.vAxis.textStyle = myTextStyle;
 
 //Load the Google visualization API and the scatter chart package
 google.load("visualization", "1", {
