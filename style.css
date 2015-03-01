@@ -1,8 +1,8 @@
 .myclass{
-border:3px dashed blue;}
+border:1px dashed blue;}
 
 #chart_div
-{width: 900px;}
+{width: 1000px;}
 
 .col-md-4{border: 3px dashed blue}
 .col-md-8{border: 3px dashed red}
