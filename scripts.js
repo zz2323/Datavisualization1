@@ -1,5 +1,25 @@
 //credit Google
 
+	// Set chart options
+	var options = {
+
+
+		title : 'How Popular are these Series Search',
+		hAxis : {
+			title : 'Popularity',
+			minValue : 0,
+			maxValue : 100, //setting the MaxValue to 100
+		},
+		vAxis : {
+			title : 'Series'
+		},
+		legend : 'top' //putting the legend on top
+	};
+	/*
+	 * changed scatter chart into a bar chart
+	 */
+
+
 var myTextStyle = {
       fontName: 'Times-Roman',
       fontSize: 18,
@@ -59,20 +79,6 @@ function drawChart() {
 
 	// Set chart options
 	var options = {
-		
-		
-	annotations: {
-    textStyle: {
-      fontName: 'Times-Roman',
-      fontSize: 18,
-      bold: true,
-      italic: true,
-      color: '#871b47',     // The color of the text.
-      auraColor: '#d799ae', // The color of the text outline.
-      opacity: 0.8          // The transparency of the text.
-    }
-  }
-};
 
 
 		title : 'How Popular are these Series Search',
