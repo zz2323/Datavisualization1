@@ -3,3 +3,9 @@ border:3px dashed blue;}
 
 #chart_div
 {width: 900px;}
+
+.col-md-4{border: 3px dashed blue}
+.col-md-8{border: 3px dashed red}
+.col-md-6{border: 3px dashed pink}
+.col-md-1{border: 3px dashed yellow}
+.col-md-3{border: 3px dashed orange}
