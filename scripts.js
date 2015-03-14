@@ -4,7 +4,6 @@ var myVaxisStyle = {
 	fontSize : 18,
 	color : '#B22222', // The color of the text.
 	opacity : 0.8 // The transparency of the text.
-	
 };
 
 var myHaxisStyle = {
@@ -13,7 +12,14 @@ var myHaxisStyle = {
 	fontSize : 20,
 	color : '#B22222', // The color of the text.
 	opacity : 0.8 // The transparency of the text.
-	
+};
+
+var titleTextStyle = {
+	fontName : 'Arial',
+	fontSize : 24,
+	color : 'black', // The color of the text.
+	opacity : 0.8,// The transparency of the text.
+	bold: 'true'
 };
 
 
@@ -91,6 +97,7 @@ function drawChart() {
 options.vAxis.format = hAxisLabelFormat;
 options.hAxis.textStyle = myHaxisStyle;
 options.vAxis.textStyle = myVaxisStyle;
+options.titleTextStyle = titleTextStyle;
 	
 
 	/*
