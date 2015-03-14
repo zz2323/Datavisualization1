@@ -1,9 +1,19 @@
 //credit Google
-var myTextStyle = {
-	fontName : 'Times-Roman',
+var myVaxisStyle = {
+	fontName : 'Arial',
 	fontSize : 18,
-	color : '#ff0000', // The color of the text.
+	color : '#B22222', // The color of the text.
 	opacity : 0.8 // The transparency of the text.
+	
+};
+
+var myHaxisStyle = {
+	
+	fontName : 'Arial',
+	fontSize : 20,
+	color : '#B22222', // The color of the text.
+	opacity : 0.8 // The transparency of the text.
+	
 };
 
 
@@ -79,8 +89,8 @@ function drawChart() {
 		var hAxisLabelFormat = 'MM d, y';
 		
 options.vAxis.format = hAxisLabelFormat;
-options.hAxis.textStyle = myTextStyle;
-options.vAxis.textStyle = myTextStyle;
+options.hAxis.textStyle = myHaxisStyle;
+options.vAxis.textStyle = myVaxisStyle;
 	
 
 	/*
