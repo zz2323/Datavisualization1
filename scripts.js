@@ -1,45 +1,44 @@
 //credit Google
 var myVaxisStyle = {
-	fontName : 'Arial',
-	fontSize : 18,
+	fontName : 'Bembo',
+	fontSize : 16,
 	color : '#B22222', // The color of the text.
 	opacity : 0.8 // The transparency of the text.
 };
 
 var myHaxisStyle = {
-	
-	fontName : 'Arial',
-	fontSize : 20,
+
+	fontName : 'Bembo',
+	fontSize : 18,
 	color : '#B22222', // The color of the text.
 	opacity : 0.8 // The transparency of the text.
 };
 
 var titleTextStyle = {
-	fontName : 'Arial',
+	fontName : 'Rockwell',
 	fontSize : 24,
 	color : 'black', // The color of the text.
-	opacity : 0.8,// The transparency of the text.
-	bold: 'true'
+	opacity : 0.8, // The transparency of the text.
+	bold : 'true'
 };
-
-
 
 // Set chart options
 var options = {
 	'title' : 'How Popular are these Series Search',
-	'width' : 800,
-	'height' : 600,
+	'width' : 900,
+	'height' : 700,
 	'hAxis' : {
 		'title' : 'Popularity',
 		minValue : 0
 	}, //end of hAxis object
 	'vAxis' : {
 		'title' : 'Series'
-	},//end of vAxis object
-	'legend': { position: "top" }, 
+	}, //end of vAxis object
+	'legend' : {
+		position : "top"
+	},
 };
 //end of option
-
 
 //Load the Google visualization API and the scatter chart package
 google.load("visualization", "1", {
@@ -59,8 +58,7 @@ function drawChart() {
 
 	var myObs = AllMyData.tags;
 	//changed the name tag to follow the D.R.Y principl
-	
-	
+
 	/*
 	 * A for loop to get the name and popularity from AllMyData
 	 *
@@ -73,9 +71,10 @@ function drawChart() {
 		//the string is already in digit, so I don't need the Number function to convert.
 		myPopularSeries.push(namesAndPopulartiy);
 	}
+	
 
 	console.log(myPopularSeries);
-	
+
 	//create the data table
 
 	var data = new google.visualization.DataTable();
@@ -84,21 +83,10 @@ function drawChart() {
 	data.addColumn('number', 'Popularity');
 	//add the vAxis
 	data.addRows(myPopularSeries);
-	
-	//reformating our data
-		var formatter = new google.visualization.DateFormat({formatType: 'short'});
-		
-		
-		//reformat our data
-		formatter.format(data, 0);
-		var myGrid = {'color': 'ff0000'}
-		var hAxisLabelFormat = 'MM d, y';
-		
-options.vAxis.format = hAxisLabelFormat;
-options.hAxis.textStyle = myHaxisStyle;
-options.vAxis.textStyle = myVaxisStyle;
-options.titleTextStyle = titleTextStyle;
-	
+
+	options.hAxis.textStyle = myHaxisStyle;
+	options.vAxis.textStyle = myVaxisStyle;
+	options.titleTextStyle = titleTextStyle;
 
 	/*
 	 * changed scatter chart into a bar chart
